@@ -1,7 +1,3 @@
-from service.PolarityModel import PolarityModel
-from utils.Review import Review
-
-
 class PredictionService:
 
     def __init__(self, pol_model, subj_model, review_factory):

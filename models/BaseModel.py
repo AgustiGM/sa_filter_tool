@@ -1,12 +1,3 @@
-import os.path
-
-import tensorflow as tf
-
-from transformers import AutoTokenizer
-
-from service.Tokenizer import Tokenizer
-
-
 class BaseModel:
     def __init__(self, path, model_name):
         self.path = path
@@ -24,7 +15,8 @@ class BaseModel:
 
     def unload(self):
         """Unload model"""
-        pass
+        self.model = None
+        self.tokenizer= None
 
     def prepare_data(self, data):
         tokenized_data = self.tokenizer.tokenize(data)

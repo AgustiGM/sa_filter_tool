@@ -3,9 +3,9 @@ from flask import request
 
 import configparser
 
-from service.PolarityModel import PolarityModel
+from models.RobertaPolarityModel import RobertaPolarityModel
 from service.PredictionService import PredictionService
-from service.SubjectivityModel import SubjectivityModel
+from models.RobertaSubjectivityModel import RobertaSubjectivityModel
 from utils.ReviewFactory import ReviewFactory
 
 config = configparser.ConfigParser()
@@ -57,8 +57,8 @@ def create_app(predict_service):
 
 if __name__ == "__main__":
     # config
-    prediction_service = PredictionService(pol_model=PolarityModel(BASE_PATH, MODEL_NAME),
-                                           subj_model=SubjectivityModel(BASE_PATH, MODEL_NAME),
+    prediction_service = PredictionService(pol_model=RobertaPolarityModel(BASE_PATH, MODEL_NAME),
+                                           subj_model=RobertaSubjectivityModel(BASE_PATH, MODEL_NAME),
                                            review_factory=ReviewFactory())
 
     # app build

@@ -1,15 +1,15 @@
-from collections import defaultdict
 from typing import List
 
 from datasets import Dataset
 from transformers import DataCollatorWithPadding
-import tensorflow as tf
+
+from custom_tokenizers.BaseTokenizer import BaseTokenizer
 from utils.Review import Review
 
 
-class Tokenizer:
+class RobertaTokenizer(BaseTokenizer):
     def __init__(self, tokenizer):
-        self.tokenizer = tokenizer
+        super().__init__(tokenizer)
         self.data_collator = DataCollatorWithPadding(tokenizer=self.tokenizer, return_tensors='tf')
 
     def aux_tokenize(self, example):
