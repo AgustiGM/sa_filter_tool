@@ -1,0 +1,30 @@
+{
+    "data": [
+        {
+            "id": "air.com.tinychat.mobile1254df65-2f56-4021-8801-a19f6e0b8ceb",
+            "text": "The lag is terrible and this has been an ongoing issue for the longest. Now I can't even join any rooms, because (I'm thinking) of some glitch in the \"confirming you're not a robot\" screen. It just closes and sends me back to the main page. After all these years, you'd think TC fixed issues such as these... Disappointing."
+        },
+        {
+            "id": "com.harleensahni.android.mbr909852d7-f3af-4b9d-84bb-809dadaf7ea9",
+            "text": "Thanks to this app I can now  control Spotify with my Casio watch via Bluetooth to my Nexus 4.  This app plugs an obvious hole in the OS"
+        },
+        {
+            "id": "prox.lab.calclock6f6e398c-b965-4ba2-913a-f751c35115c0",
+            "text": "Amazing app. Exactly the same I ever wished to have, and Playstore lead to me this.. Really helps to have a concise view of what to do next."
+        },
+        {
+            "id": "com.aloggers.atimeloggerapp88182a24-1136-4a49-a52e-7b2320109766",
+            "text": "Wow. Just downloaded and love it so far. Soooo easy to use. The app that helps tracking but doesn't become an activity on its own. Well done developer. Will use for few days before going to PRO. Would have been nice to have an option to remove the default activities. All my activities are custom. Dont want to track shop, cinema rat and all other default activities \ud83d\ude0a. Also to have activities in the list rather than icons so the full name of custom activity can be displayed. Desktop app?"
+        },
+        {
+            "id": "com.google.android.apps.accessibility.revealbd4633a7-c296-46f9-aa2d-ecfcec5ed4fe",
+            "text": ", Please include more features. For example, 1 PDF reader, 2 image description, 3-assamese language etc."
+        },
+        {
+            "id": "com.agnessa.agnessamini32936bc5-8ab4-43e9-9d25-ce69258d827c",
+            "text": "I love this app, exactly what I've been looking for but i have issues with time setting. I noticed there's no AM or PM and the notification doesn't work for me always. I will appreciate that if it can be fixed."
+        }
+    ],
+    "include-polarity": [1,2,3],
+    "include-subjectivity": [0,1]
+}
