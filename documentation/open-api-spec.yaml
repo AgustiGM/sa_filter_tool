@@ -1,0 +1,201 @@
+openapi: 3.0.0
+info:
+  title: Sentiment Analysis Filter Tool
+  description: "Open API specification for the Sentiment Analysis Filter Tool"
+  version: 1.0.0
+
+paths:
+  /polarity:
+    post:
+      summary: Endpoint for polarity analysis
+      description: Perform polarity analysis on a text input
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        description: The ID of the text
+                      text:
+                        type: string
+                        description: The text for polarity analysis
+                    required:
+                      - id
+                      - text
+                    description: List of text objects for polarity analysis
+                include:
+                  type: array
+                  items:
+                    type: integer
+                  description: Include labels for polarity
+              required:
+                - data
+                - include
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      description: The ID
+                    text:
+                      type: array
+                      items:
+                        type: string
+                      description: List of sentences
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Description of the error
+
+  /subjectivity:
+    post:
+      summary: Endpoint for subjectivity analysis
+      description: Perform subjectivity analysis on a text input
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        description: The ID of the text
+                      text:
+                        type: string
+                        description: The text for subjectivity analysis
+                    required:
+                      - id
+                      - text
+                    description: List of text objects for subjectivity analysis
+                include:
+                  type: array
+                  items:
+                    type: integer
+                  description: Include labels for subjectivity
+              required:
+                - data
+                - include
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      description: The ID
+                    text:
+                      type: array
+                      items:
+                        type: string
+                      description: List of sentences
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Description of the error
+
+  /combined:
+    post:
+      summary: Endpoint for combined analysis
+      description: Perform both polarity and subjectivity analysis on a text input
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        description: The ID of the text
+                      text:
+                        type: string
+                        description: The text for polarity and subjectivity analysis
+                    required:
+                      - id
+                      - text
+                    description: List of text objects for polarity and subjectivity analysis
+                include-polarity:
+                  type: array
+                  items:
+                    type: integer
+                  description: Include labels for polarity
+                include-subjectivity:
+                  type: array
+                  items:
+                    type: integer
+                  description: Include labels for subjectivity
+              required:
+                - data
+                - include-polarity
+                - include-subjectivity
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      description: The ID
+                    text:
+                      type: array
+                      items:
+                        type: string
+                      description: List of sentences
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Description of the error
