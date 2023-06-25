@@ -66,6 +66,7 @@ class TestPredictionService(unittest.TestCase):
         self.mock_review_factory.return_subjectivity_ok.assert_called_once_with(self.review_data['include'])
         mapper_mock.assert_called()
 
+
     def tearDown(self):
         self.mock_model.reset_mock()
         self.mock_review_factory.reset_mock()

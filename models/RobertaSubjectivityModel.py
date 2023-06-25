@@ -21,7 +21,7 @@ class RobertaSubjectivityModel(RobertaModel):
 
         for rev in prepared_data:
             preds = self.model.predict(rev.tensors, verbose=1)['logits']
-            rev.predicted_sub = np.argmax(preds, axis=1).tolist()
+            rev.subjectivity = np.argmax(preds, axis=1).tolist()
 
         self.unload()
 
