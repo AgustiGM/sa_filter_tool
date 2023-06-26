@@ -21,6 +21,6 @@ class RobertaPolarityModel(RobertaModel):
 
         for rev in prepared_data:
             preds = self.model.predict(rev.tensors, verbose=1)['logits']
-            rev.predicted_pol = np.argmax(preds, axis=1).tolist()
+            rev.polarity = np.argmax(preds, axis=1).tolist()
 
         self.unload()

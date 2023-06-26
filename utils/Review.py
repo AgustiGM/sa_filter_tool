@@ -12,7 +12,7 @@ class Review:
         self.text = review_dict['text']
         self.sentences = split_sentences(review_dict['text'])
         self.tensors = None
-        self.predicted_pol = None
-        self.predicted_sub = None
+        self.polarity = None
+        self.subjectivity = None
 
 
